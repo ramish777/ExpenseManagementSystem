@@ -1,0 +1,196 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|c:\\users\\ramish.afaq\\onedrive - veripark\\vppak504-ramish afaq bhutta\\readiness\\expenseapplication\\expensemanagementsystem\\expensemanagementsystem\\views\\employee\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|solutionrelative:expensemanagementsystem\\views\\employee\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/KHIPAKNB125/ExpenseManagement1/True/SqlTable/dbo.Transactions.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|c:\\users\\ramish.afaq\\onedrive - veripark\\vppak504-ramish afaq bhutta\\readiness\\expenseapplication\\expensemanagementsystem\\expensemanagementsystem\\views\\admin\\view.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|solutionrelative:expensemanagementsystem\\views\\admin\\view.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|c:\\users\\ramish.afaq\\onedrive - veripark\\vppak504-ramish afaq bhutta\\readiness\\expenseapplication\\expensemanagementsystem\\expensemanagementsystem\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|solutionrelative:expensemanagementsystem\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|c:\\users\\ramish.afaq\\onedrive - veripark\\vppak504-ramish afaq bhutta\\readiness\\expenseapplication\\expensemanagementsystem\\expensemanagementsystem\\migrations\\20240919071710_creatingtableswithrelationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|solutionrelative:expensemanagementsystem\\migrations\\20240919071710_creatingtableswithrelationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|c:\\users\\ramish.afaq\\onedrive - veripark\\vppak504-ramish afaq bhutta\\readiness\\expenseapplication\\expensemanagementsystem\\expensemanagementsystem\\controllers\\accountantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|solutionrelative:expensemanagementsystem\\controllers\\accountantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|c:\\users\\ramish.afaq\\onedrive - veripark\\vppak504-ramish afaq bhutta\\readiness\\expenseapplication\\expensemanagementsystem\\expensemanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|solutionrelative:expensemanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|c:\\users\\ramish.afaq\\onedrive - veripark\\vppak504-ramish afaq bhutta\\readiness\\expenseapplication\\expensemanagementsystem\\expensemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|solutionrelative:expensemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|c:\\users\\ramish.afaq\\onedrive - veripark\\vppak504-ramish afaq bhutta\\readiness\\expenseapplication\\expensemanagementsystem\\expensemanagementsystem\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|solutionrelative:expensemanagementsystem\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|c:\\users\\ramish.afaq\\onedrive - veripark\\vppak504-ramish afaq bhutta\\readiness\\expenseapplication\\expensemanagementsystem\\expensemanagementsystem\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B9EC4C-AC42-471D-8930-286BCBE06B97}|ExpenseManagementSystem\\ExpenseManagementSystem.csproj|solutionrelative:expensemanagementsystem\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "ExpenseManagementSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Program.cs",
+              "RelativeToolTip": "ExpenseManagementSystem\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T10:48:16.33Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountantController.cs",
+              "DocumentMoniker": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Controllers\\AccountantController.cs",
+              "RelativeDocumentMoniker": "ExpenseManagementSystem\\Controllers\\AccountantController.cs",
+              "ToolTip": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Controllers\\AccountantController.cs",
+              "RelativeToolTip": "ExpenseManagementSystem\\Controllers\\AccountantController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:50:07.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "ExpenseManagementSystem\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "ExpenseManagementSystem\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T11:49:18.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20240919071710_CreatingTablesWithRelationship.cs",
+              "DocumentMoniker": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Migrations\\20240919071710_CreatingTablesWithRelationship.cs",
+              "RelativeDocumentMoniker": "ExpenseManagementSystem\\Migrations\\20240919071710_CreatingTablesWithRelationship.cs",
+              "ToolTip": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Migrations\\20240919071710_CreatingTablesWithRelationship.cs",
+              "RelativeToolTip": "ExpenseManagementSystem\\Migrations\\20240919071710_CreatingTablesWithRelationship.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:48:30.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "ExpenseManagementSystem\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "ExpenseManagementSystem\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAhwC4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T07:36:42.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "View.cshtml",
+              "DocumentMoniker": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Views\\Admin\\View.cshtml",
+              "RelativeDocumentMoniker": "ExpenseManagementSystem\\Views\\Admin\\View.cshtml",
+              "ToolTip": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Views\\Admin\\View.cshtml",
+              "RelativeToolTip": "ExpenseManagementSystem\\Views\\Admin\\View.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T11:49:19.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "ExpenseManagementSystem\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "ExpenseManagementSystem\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwCkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:48:08.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "ExpenseManagementSystem\\appsettings.json",
+              "ToolTip": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\appsettings.json",
+              "RelativeToolTip": "ExpenseManagementSystem\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-01T11:47:37.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dbo.Transactions.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/KHIPAKNB125/ExpenseManagement1/True/SqlTable/dbo.Transactions.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/KHIPAKNB125/ExpenseManagement1/True/SqlTable/dbo.Transactions.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-30T08:14:03.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Views\\Employee\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ExpenseManagementSystem\\Views\\Employee\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ramish.afaq\\OneDrive - VERIPARK\\VPPAK504-RAMISH AFAQ BHUTTA\\Readiness\\ExpenseApplication\\ExpenseManagementSystem\\ExpenseManagementSystem\\Views\\Employee\\Edit.cshtml",
+              "RelativeToolTip": "ExpenseManagementSystem\\Views\\Employee\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-30T07:36:38.779Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

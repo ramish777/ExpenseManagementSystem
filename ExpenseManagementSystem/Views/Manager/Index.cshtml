@@ -1,0 +1,96 @@
+﻿@model IEnumerable<ExpenseManagementSystem.ViewModels.ManagerExpenseForm>
+
+@{
+    ViewData["Title"] = "Expenses Awaiting Approval";
+    var currentStatus = ViewData["CurrentStatus"] != null ? ViewData["CurrentStatus"].ToString() : "Pending"; // Default to "Pending"
+}
+<partial name="_Notifications" />
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <!-- Filter Form -->
+    <form method="get" action="@Url.Action("Index")" class="mb-3 row">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                @if (currentStatus != null)
+                {
+                    @currentStatus
+                }
+                else
+                {
+                    <text>Select Status</text>
+                }
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#" onclick="selectStatus('Pending')">Pending</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectStatus('Approved')">Approved</a></li>
+                <li><a class="dropdown-item" href="#" onclick="selectStatus('Rejected')">Rejected</a></li>
+            </ul>
+            <input type="hidden" id="statusInput" name="status" value="@ViewData["CurrentStatus"]" />
+        </div>
+
+        <div class="col-md-4">
+            <label for="dateFilter" class="form-label">Filter by Date:</label>
+            <input type="date" id="dateFilter" name="date" class="form-control"
+                   value="@(ViewData["CurrentDate"] != null ? Convert.ToDateTime(ViewData["CurrentDate"]).ToString("yyyy-MM-dd") : string.Empty)" />
+        </div>
+
+        <div class="col-md-4 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary">Apply Filters</button>
+        </div>
+    </form>
+
+    <!-- Expense Forms Table -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Employee Name</th>
+                <th>Date of Expense Form</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Remarks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="6" class="text-center">
+                        <div class="alert alert-info" role="alert">
+                            No expense forms match the applied filters.
+                        </div>
+                    </td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var expenseForm in Model)
+                {
+                    <tr>
+                        <td>@expenseForm.Id</td>
+                        <td>@expenseForm.employeeName</td>
+                        <td>@expenseForm.Date.ToShortDateString()</td>
+                        <td>@expenseForm.Amount.ToString() @expenseForm.Currency</td>
+                        <td>@expenseForm.Status</td>
+                        <td>@expenseForm.Remarks</td>
+                        <td>
+                            <a href="@Url.Action("Edit", new { id = expenseForm.Id })" class="btn btn-success btn-sm">View & Decide</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+        function selectStatus(status) {
+            document.getElementById('statusInput').value = status;
+            document.getElementById('dropdownMenuButton').innerText = status || 'Select Status';
+        }
+    </script>
+}

@@ -1,0 +1,98 @@
+﻿@model ExpenseManagementSystem.ViewModels.ExpenseFormVM
+
+<div class="container py-4">
+    <!-- Currency Section -->
+    <div class="row mb-3">
+        <div class="col">
+            <label for="currencySelector" class="form-label text-uppercase text-muted">Currency Selected</label>
+            <div id="currencySelector" class="p-2 border rounded bg-light fw-bold">
+                @Model.SelectedCurrency
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Section -->
+    <div class="row mb-3">
+        <div class="col">
+            <label for="Status" class="form-label text-uppercase text-muted">Status</label>
+            <div id="Status" class="p-2 border rounded bg-light fw-bold text-success">
+                @Model.Status
+            </div>
+        </div>
+    </div>
+
+    <!-- Remarks Section -->
+    <div class="row mb-3">
+        <div class="col">
+            <label for="remarks" class="form-label text-uppercase text-muted">Remarks</label>
+            <div id="remarks" class="p-2 border rounded bg-light fw-bold">
+                @if (string.IsNullOrEmpty(Model.Remarks))
+                {
+                    <span class="text-muted">No Remarks</span>
+                }
+                else
+                {
+                    <span>@Model.Remarks</span>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Title for each expense item -->
+    <h5 class="expense-title text-center text-uppercase border-bottom pb-2 mb-3 fw-bold">Expense Item</h5>
+    <!-- Expenses List Section -->
+    <div id="expensesContainer" class="row mb-4">
+        @for (var i = 0; i < Model.Expenses.Count; i++)
+        {
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card expense-card border-0 shadow-sm p-3 bg-white rounded">
+ 
+                    <!-- Hidden field for the ExpenseItem Id -->
+                    <input type="hidden" name="Expenses[@i].Id" value="@Model.Expenses[i].Id" />
+
+                    <div class="mb-2">
+                        <label class="form-label text-uppercase text-muted">Description</label>
+                        <div class="form-control-plaintext border p-2 rounded bg-light">
+                            @Model.Expenses[i].Description
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label text-uppercase text-muted">Amount</label>
+                        <div class="form-control-plaintext border p-2 rounded bg-light">
+                            @Model.Expenses[i].Amount
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label text-uppercase text-muted">Date</label>
+                        <div class="form-control-plaintext border p-2 rounded bg-light">
+                            @Model.Expenses[i].Date.ToShortDateString()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Total Amount Section -->
+    <div class="row">
+        <div class="col">
+            <label for="totalAmount" class="form-label text-uppercase text-muted">Total Amount</label>
+            <div id="totalAmount" class="p-3 border rounded bg-light fw-bold fs-5 text-primary">
+                @Model.TotalAmount
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom CSS for black outer border and expense title -->
+<style>
+    .expense-card {
+        border: 2px solid black; /* Black outer border */
+    }
+
+    .expense-title {
+        border-color: black; /* Black border below title */
+    }
+</style>

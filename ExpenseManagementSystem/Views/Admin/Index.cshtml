@@ -1,0 +1,197 @@
+﻿@model IEnumerable<ExpenseManagementSystem.ViewModels.TransactionVM>
+
+@{
+    ViewData["Title"] = "Generate Report";
+    var currentStartDate = ViewData["CurrentStartDate"] != null ? ViewData["CurrentStartDate"].ToString() : string.Empty;
+    var currentEndDate = ViewData["CurrentEndDate"] != null ? ViewData["CurrentEndDate"].ToString() : string.Empty;
+}
+
+<head>
+    <style>
+        #chartsContainer {
+            position: relative;
+            height: 400px; /* Set a height to align properly */
+        }
+
+        #noDataMessage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+        <!-- Transaction History Heading -->
+        <h1>@ViewData["Title"]</h1>
+
+        <!-- View Expense Forms Button aligned to the right -->
+        <a href="@Url.Action("ViewExpenseForm")" class="btn btn-info btn-sm">View Expense Forms</a>
+    </div>
+
+    <!-- Filter Options -->
+    <form method="get" action="@Url.Action("Index")" class="mb-3 row g-2 align-items-end">
+
+        <!-- Date Range Filter -->
+        <div class="col-md-3">
+            <label for="startDateFilter" class="form-label">Start Date:</label>
+            <input type="date" id="startDateFilter" name="startDate" class="form-control" value="@currentStartDate" />
+        </div>
+
+        <div class="col-md-3">
+            <label for="endDateFilter" class="form-label">End Date:</label>
+            <input type="date" id="endDateFilter" name="endDate" class="form-control" value="@currentEndDate" />
+        </div>
+
+
+        <!-- Submit Button -->
+        <div class="col-md-auto">
+            <button type="submit" class="btn btn-primary">Apply Filters</button>
+        </div>
+
+    </form>
+
+
+    <!-- Show message if no dates are provided -->
+    @if (string.IsNullOrEmpty(currentStartDate) && string.IsNullOrEmpty(currentEndDate))
+    {
+        <div id="noDateMessage" class="alert alert-warning" role="alert">
+            Please provide a start and end date to generate the report.
+        </div>
+    }
+    else
+    {
+        <!-- Transaction History Table -->
+        <div class="mt-3 table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Form ID</th>
+                        <th>Employee Name</th>
+                        <th>Role</th>
+                        <th>Action Detail</th>
+                        <th>Action Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center">No transactions found.</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var transaction in Model)
+                        {
+                            <tr>
+                                <td>@transaction.TransactionId</td>
+                                <td>@transaction.FormId</td>
+                                <td>@transaction.UserName</td>
+                                <td>@transaction.Role</td>
+                                <td>@transaction.ActionDetail</td>
+                                <td>@transaction.ActionDate.ToString("yyyy-MM-dd")</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <!-- Charts Section -->
+    <h2>Status Overview</h2>
+    <div class="mt-5 d-flex justify-content-around align-items-center" id="chartsContainer">
+        <div id="pieChartContainer">
+            <canvas id="pieChart" width="400" height="400"></canvas>
+        </div>
+        <div id="barChartContainer">
+            <canvas id="barChart" width="400" height="400"></canvas>
+        </div>
+        <div id="noDataMessage" class="text-center" style="display: none;">
+            <h4>No data available to display charts.</h4>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+
+        // Prepare data for charts
+        var statusCounts = {
+            Created: 0,
+            Approved: 0,
+            Rejected: 0,
+            Paid: 0
+        };
+
+        // Count the occurrences of each status based on filtered results
+        @foreach (var transaction in Model)
+        {
+            <text>
+                statusCounts['@transaction.ActionDetail']++;
+            </text>
+        }
+
+        // Sum the total count of all statuses
+        var totalTransactions = statusCounts.Created + statusCounts.Approved + statusCounts.Rejected + statusCounts.Paid;
+
+        // Check if there is any data to show
+        if (totalTransactions === 0) {
+            // No data available, show the message
+            document.getElementById('chartsContainer').style.display = 'none';
+            document.getElementById('noDataMessage').style.display = 'block';
+        } else {
+            // Pie Chart
+            var ctxPie = document.getElementById('pieChart').getContext('2d');
+            var pieChart = new Chart(ctxPie, {
+                type: 'pie',
+                data: {
+                    labels: ['Created', 'Approved', 'Rejected', 'Paid'],
+                    datasets: [{
+                        data: [statusCounts.Created, statusCounts.Approved, statusCounts.Rejected, statusCounts.Paid],
+                        backgroundColor: ['#FF6384', '#FFCE56', '#FF5733', '#4BC0C0']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                boxWidth: 20,
+                                padding: 20
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Bar Chart
+            var ctxBar = document.getElementById('barChart').getContext('2d');
+            var barChart = new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['Created', 'Approved', 'Rejected', 'Paid'],
+                    datasets: [{
+                        label: 'Number of Transactions',
+                        data: [statusCounts.Created, statusCounts.Approved, statusCounts.Rejected, statusCounts.Paid],
+                        backgroundColor: '#4BC0C0'
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    responsive: true
+                }
+            });
+        }
+    </script>
+}

@@ -1,0 +1,125 @@
+﻿@model ExpenseManagementSystem.ViewModels.ExpenseFormVM
+
+<div class="container py-4">
+    <!-- Expense Form ID Section -->
+    <div class="mb-3">
+        <label for="ID" class="form-label text-uppercase text-muted">Expense Form ID:</label>
+        <div id="ID" class="p-2 border rounded bg-light fw-bold">
+            @Model.Id
+        </div>
+    </div>
+
+    <!-- Currency Section -->
+    <div class="mb-3">
+        <label for="currencySelector" class="form-label text-uppercase text-muted">Currency Selected:</label>
+        <div id="currencySelector" class="p-2 border rounded bg-light fw-bold">
+            @Model.SelectedCurrency
+        </div>
+    </div>
+
+    <!-- Status Section -->
+    <div class="mb-3">
+        <label for="Status" class="form-label text-uppercase text-muted">Status:</label>
+        <div id="Status" class="p-2 border rounded bg-light fw-bold text-success">
+            @Model.Status
+        </div>
+    </div>
+
+    <!-- Expenses List Section -->
+    <div id="expensesContainer" class="row g-3 mb-4">
+        @for (var i = 0; i < Model.Expenses.Count; i++)
+        {
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm p-3 bg-white rounded">
+                    <!-- Hidden field for the ExpenseItem Id -->
+                    <input type="hidden" name="Expenses[@i].Id" value="@Model.Expenses[i].Id" />
+
+                    <!-- Description Section -->
+                    <div class="mb-2">
+                        <label class="form-label text-uppercase text-muted">Description</label>
+                        <div class="form-control-plaintext border p-2 rounded bg-light">
+                            @Model.Expenses[i].Description
+                        </div>
+                    </div>
+
+                    <!-- Amount Section -->
+                    <div class="mb-2">
+                        <label class="form-label text-uppercase text-muted">Amount</label>
+                        <div class="form-control-plaintext border p-2 rounded bg-light">
+                            @Model.Expenses[i].Amount
+                        </div>
+                    </div>
+
+                    <!-- Date Section -->
+                    <div class="mb-2">
+                        <label class="form-label text-uppercase text-muted">Date</label>
+                        <div class="form-control-plaintext border p-2 rounded bg-light">
+                            @Model.Expenses[i].Date.ToShortDateString()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Total Amount Section -->
+    <div class="mb-3">
+        <label for="totalAmount" class="form-label text-uppercase text-muted">Total Amount:</label>
+        <div id="totalAmount" class="p-3 border rounded bg-light fw-bold fs-5 text-primary">
+            @Model.TotalAmount
+        </div>
+    </div>
+
+    <!-- Action Buttons Section -->
+    <div class="d-flex justify-content-between mb-3">
+        <!-- Approve Button -->
+        <form asp-action="Approve" method="post">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <button type="submit" class="btn btn-success" id="approveButton">
+                <i class="fas fa-check"></i> Approve
+            </button>
+        </form>
+
+        <!-- Reject Button -->
+        <button type="button" class="btn btn-danger" id="rejectButton" onclick="showRejectRemarks()">
+            <i class="fas fa-times"></i> Reject
+        </button>
+    </div>
+
+    <!-- Reject Remarks Section (Hidden by Default) -->
+    <div id="rejectSection" class="mb-3" style="display:none;">
+        <form asp-action="Reject" method="post">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <div class="mb-3">
+                <label for="rejectRemarks" class="form-label">Remarks for Rejection:</label>
+                <textarea id="rejectRemarks" name="remarks" class="form-control" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning">
+                <i class="fas fa-exclamation-triangle"></i> Confirm Rejection
+            </button>
+        </form>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    <script>
+
+        // Function to show the remarks section for rejection
+        function showRejectRemarks() {
+            document.getElementById('rejectSection').style.display = 'block';
+        }
+
+        // Function to handle rejection
+        function confirmRejection() {
+            const remarks = document.getElementById('rejectRemarks').value;
+            if (!remarks) {
+                alert("Please provide remarks for rejection.");
+                return;
+            }
+        }
+    </script>
+}
+

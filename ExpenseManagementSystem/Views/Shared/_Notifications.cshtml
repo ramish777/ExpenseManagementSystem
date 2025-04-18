@@ -1,0 +1,79 @@
+﻿@{
+    var successMessage = TempData["Success"] as string;
+    var rejectMessage = TempData["Reject"] as string; // Corrected variable name
+}
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div id="success-alert" class="alert alert-success fade" role="alert" 
+         style="position: fixed; top: 80px; left: 50%; transform: translateX(-50%); 
+                border-radius: 0.25rem; max-width: fit-content; text-align: center; 
+                color: white; background-color: #28a745; border: 2px solid #218838; 
+                opacity: 0; transition: opacity 0.5s; display: flex; align-items: center; padding: 0.5rem 1rem;">
+        <i class="fas fa-check-circle" style="margin-right: 10px; font-size: 1.5rem;"></i>
+        <span style="font-weight: bold; white-space: nowrap;">@successMessage</span>
+    </div>
+
+    <script>
+        // Automatically fade in the success alert
+        var alert = document.getElementById('success-alert');
+        if (alert) {
+            alert.style.opacity = 1; // Set opacity to 1 to fade in
+            
+            // Automatically fade out the alert after 5 seconds
+            setTimeout(function () {
+                alert.classList.remove('show');
+                alert.classList.add('fade');
+
+                // Wait for the Bootstrap transition to complete, then hide the alert
+                setTimeout(function () {
+                    alert.style.display = 'none';
+                }, 150); // Adjust this duration according to Bootstrap's fade duration
+            }, 5000); // Time in milliseconds before fading out
+
+            // Additional fade-out effect after 5 seconds
+            setTimeout(function () {
+                alert.style.opacity = 0; // Set opacity back to 0 for fade-out effect
+            }, 5000); // Time in milliseconds before starting to fade out
+        }
+    </script>
+}
+
+@if (!string.IsNullOrEmpty(rejectMessage))
+{
+    <div id="reject-alert" class="alert alert-danger fade" role="alert" 
+         style="position: fixed; top: 80px; left: 50%; transform: translateX(-50%); 
+                border-radius: 0.25rem; max-width: fit-content; text-align: center; 
+                color: white; background-color: #dc3545; border: 2px solid #c82333; 
+                opacity: 0; transition: opacity 0.5s; display: flex; align-items: center; padding: 0.5rem 1rem;">
+        <i class="fas fa-times-circle" style="margin-right: 10px; font-size: 1.5rem;"></i>
+        <span style="font-weight: bold; white-space: nowrap;">@rejectMessage</span>
+    </div>
+
+    <script>
+        // Automatically fade in the rejection alert
+        var rejectAlert = document.getElementById('reject-alert');
+        if (rejectAlert) {
+            rejectAlert.style.opacity = 1; // Set opacity to 1 to fade in
+            
+            // Automatically fade out the alert after 5 seconds
+            setTimeout(function () {
+                rejectAlert.classList.remove('show');
+                rejectAlert.classList.add('fade');
+
+                // Wait for the Bootstrap transition to complete, then hide the alert
+                setTimeout(function () {
+                    rejectAlert.style.display = 'none';
+                }, 150); // Adjust this duration according to Bootstrap's fade duration
+            }, 5000); // Time in milliseconds before fading out
+
+            // Additional fade-out effect after 5 seconds
+            setTimeout(function () {
+                rejectAlert.style.opacity = 0; // Set opacity back to 0 for fade-out effect
+            }, 5000); // Time in milliseconds before starting to fade out
+        }
+    </script>
+}
+
+<!-- Include Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />

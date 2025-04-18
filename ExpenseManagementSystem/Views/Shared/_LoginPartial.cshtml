@@ -1,0 +1,13 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+
+
+<div class="d-flex justify-content-end align-items-center p-3 bg-white">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <span style="font-weight: bold; margin-right: 15px;">Welcome, @User.Identity!.Name!</span>
+        <form asp-action="Logout" asp-controller="Account" method="post">
+            <button type="submit" class="btn btn-outline-danger btn-sm">Log Out</button>
+        </form>
+    }
+</div>

@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+    <script>
+        $(document).ready(function () {
+        @if (ViewBag.Success == true)
+        {
+            <text>
+                        toastr.success('@ViewBag.Message');
+            </text>
+        }
+        else if (ViewBag.Success == false)
+        {
+            <text>
+                        toastr.error('@ViewBag.Message');
+            </text>
+        }
+        });
+    </script>
+}

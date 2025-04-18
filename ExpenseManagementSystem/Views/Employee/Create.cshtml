@@ -1,0 +1,50 @@
+﻿@model ExpenseManagementSystem.ViewModels.ExpenseFormVM
+
+@{
+    ViewData["Title"] = "Create Expense";
+}
+
+<div>
+    <form asp-action="Create" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label for="currencySelector">Select Currency:</label>
+            <select id="currencySelector" name="SelectedCurrency" class="form-control">
+                <option value="N/A">N/A</option>
+                <option value="USD">USD</option>
+                <option value="PKR">PKR</option>
+                <option value="INR">INR</option>
+            </select>
+        </div>
+
+        <div id="selectCurrencyMessage" class="alert alert-warning" role="alert" style="display:none;">
+            Please select a currency first.
+        </div>
+
+        <div id="expensesContainer" class="d-flex flex-wrap mb-3">
+            <!-- new rows of expense list formed-->
+        </div>
+
+        <!-- Validation message for at least one expense -->
+        <div id="oneExpenseValidationMessage" class="alert alert-danger mt-2" role="alert" style="display:none;">
+            The expense form must have at least one expense.
+        </div>
+
+        <button type="button" id="addExpenseBtn" class="btn btn-secondary">Add Expense</button>
+
+        <div class="mt-3">
+            <strong>Total Amount:</strong>
+            <span id="totalAmount">@Model.TotalAmount.ToString("F2")</span>
+            <div id="amountLimitMessage" class="alert alert-danger mt-2" role="alert" style="display:none;">
+                Total amount cannot exceed 5000.
+            </div>
+        </div>
+
+        <button type="submit" id="createExpenseBtn" class="btn btn-primary mt-3" disabled>Submit</button>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/ExpenseFormCreation.js"></script>
+}

@@ -1,0 +1,82 @@
+﻿@model ExpenseManagementSystem.ViewModels.ExpenseFormVM
+
+<div class="container py-4">
+    <!-- Expense Form ID Section -->
+    <div class="mb-3">
+        <label for="ID" class="form-label text-uppercase text-muted">Expense Form ID:</label>
+        <div id="ID" class="p-2 border rounded bg-light fw-bold">
+            @Model.Id
+        </div>
+    </div>
+
+    <!-- Currency Selected Section -->
+    <div class="mb-3">
+        <label for="currencySelector" class="form-label text-uppercase text-muted">Currency Selected:</label>
+        <div id="currencySelector" class="p-2 border rounded bg-light fw-bold">
+            @Model.SelectedCurrency
+        </div>
+    </div>
+
+    <!-- Status Section -->
+    <div class="mb-3">
+        <label for="Status" class="form-label text-uppercase text-muted">Status:</label>
+        <div id="Status" class="p-2 border rounded bg-light fw-bold text-success">
+            @Model.Status
+        </div>
+    </div>
+
+    <!-- Expenses List Section -->
+    <div id="expensesContainer" class="row g-3 mb-4">
+        @for (var i = 0; i < Model.Expenses.Count; i++)
+        {
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm p-3 border rounded expense-row">
+                    <!-- Hidden field for the ExpenseItem Id -->
+                    <input type="hidden" name="Expenses[@i].Id" value="@Model.Expenses[i].Id" />
+
+                    <!-- Description Section -->
+                    <div class="mb-2">
+                        <label class="form-label text-uppercase text-muted">Description</label>
+                        <div class="form-control-plaintext border p-2 rounded bg-light">
+                            @Model.Expenses[i].Description
+                        </div>
+                    </div>
+
+                    <!-- Amount Section -->
+                    <div class="mb-2">
+                        <label class="form-label text-uppercase text-muted">Amount</label>
+                        <div class="form-control-plaintext border p-2 rounded bg-light">
+                            @Model.Expenses[i].Amount
+                        </div>
+                    </div>
+
+                    <!-- Date Section -->
+                    <div class="mb-2">
+                        <label class="form-label text-uppercase text-muted">Date</label>
+                        <div class="form-control-plaintext border p-2 rounded bg-light">
+                            @Model.Expenses[i].Date.ToShortDateString()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Total Amount Section -->
+    <div class="mb-3">
+        <label for="totalAmount" class="form-label text-uppercase text-muted">Total Amount:</label>
+        <div id="totalAmount" class="p-3 border rounded bg-light fw-bold fs-5 text-primary">
+            @Model.TotalAmount
+        </div>
+    </div>
+</div>
+<!-- Action Buttons -->
+@if (Model.Status == "Approved")
+{
+    <div class="d-flex justify-content-between mb-3">
+        <form asp-action="Approve" method="post">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <button type="submit" class="btn btn-success" id="approveButton">Approve Payment</button>
+        </form>
+    </div>
+}
